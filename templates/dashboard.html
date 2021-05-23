@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+ <title> Dashboard </title>
+ <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+ {% endblock%}
+
+{% block body%}
+    <div align="center">
+        <div align="center" class="border">
+            <div class="header">
+                <h1 class="word">Dashboard</h1>
+            </div>
+            </br></br></br>
+            <h3 class="bottom">
+                Hi {{session.username}}!!</br></br> Welcome to the Dashboard Page...                 
+            </h3></br></br></br>
+            <a href="{{ url_for('logout') }}" class="btn">Logout</a>
+          </div>
+        </div>
+{% endblock %}
